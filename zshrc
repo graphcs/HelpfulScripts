@@ -35,8 +35,8 @@ alias gpmaster='git fetch origin && git reset --hard origin/master' # Reset loca
 alias gpmain='git fetch origin && git reset --hard origin/main'     # Reset local main to match origin
 
 # Development Environment Aliases
-alias so='source ~/.zshrc'                 # Reload the zsh configuration
-alias prof='code ~/.zshrc'                 # Open the zsh configuration in Visual Studio Code
+alias so='cp /root/HelpfulScripts/zshrc ~/.zshrc && source ~/.zshrc'  # Copy zshrc from /root/HelpfulScripts and re-source it
+alias prof='code /root/HelpfulScripts/zshrc'  # Open /root/HelpfulScripts/zshrc in Visual Studio Code for editing
 alias venv='source venv/bin/activate'      # Activate Python virtual environment
 alias de='deactivate'                      # Deactivate Python virtual environment
 alias python='python3'                     # Default Python to Python 3
