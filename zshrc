@@ -28,6 +28,7 @@ alias gss='git stash push -m'              # Stash changes with a custom message
 alias gsa='git stash apply && git stash drop' # Apply the latest stashed changes and drop the stash
 alias gsl='git stash list'                 # List stashes in a more readable format
 alias gsc='git stash clear'                # Delete all stashed entries
+alias gl='git log'
 
 # Git Workflow Aliases
 alias gdb='current_branch=$(git symbolic-ref --short HEAD); git branch | grep -v $current_branch | xargs git branch -D' # Delete all branches except current
