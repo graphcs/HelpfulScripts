@@ -64,3 +64,16 @@ alias ports='sudo lsof -i -P | grep -i "listen"' # Show open network ports and a
 
 # Git Global Configuration
 git config --global alias.uncommit 'reset HEAD^' # Uncommit
+
+export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:$PATH"
+alias gll='git log --oneline --decorate --graph'
+alias venv='source venv/bin/activate'
+
+export GREP_COLORS='ms=01;32:mc=01;32:sl=:cx=:fn=35:ln=32:bn=32:se=36'
+alias grep='grep --color=always'
+
+alias gotestall='find . -type d -exec bash -c '\''if [ -n "$(ls -A {}/*.go 2>/dev/null)" ]; then cd {} && go test -v 2>&1 | grep -v -e "current directory is contained in a module that is not one of the workspace modules listed in go.work" -e "go work use" -e "no test files"; fi'\'' \;'
+export PATH="/usr/local/bin:$PATH"
+export PATH=$PATH:/usr/local/go/bin
+export GOPATH=/Users/root/go
+export PATH=$GOPATH/bin:$PATH
