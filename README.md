@@ -1,80 +1,51 @@
 # HelpfulScripts
-Code and scripts helpful for software development
 
-# General System Aliases 🚀
+**HelpfulScripts** is a curated collection of code snippets, scripts, and terminal aliases designed to enhance the software development workflow. Whether you're managing version control with Git, optimizing your development environment, or simply looking for shortcuts to common terminal commands, this repository aims to provide a comprehensive toolkit to make your daily tasks more efficient and enjoyable.
 
-Enhance your terminal experience with these handy aliases for common tasks.
+## Purpose
 
-## General Shortcuts ✨
-- `alias c='clear'` - Clear the terminal screen 🧹
-- `alias l='ls -la'` - List all files, including hidden ones, in long format 📄
-- `alias lr='ls -ltr'` - List files sorted by modification time, in reverse 🔄
-- `alias ..='cd ..'` - Go up one directory ⬆️
-- `alias ...='cd ../../'` - Go back 2 directories ⬆️⬆️
-- `alias ....='cd ../../../'` - Go back 3 directories ⬆️⬆️⬆️
-- `alias rmrf='rm -rf'` - Remove directories and their contents safely 🗑️
+This repository serves as a one-stop resource for developers seeking to streamline their coding and terminal navigation processes. By offering a range of scripts and aliases, **HelpfulScripts** aims to reduce the complexity of repetitive tasks, improve productivity, and enable a more seamless development experience.
 
-## Git Aliases for Common Commands 🌿
-- `alias gb='git branch'` - List local branches 🌱
-- `alias gbr='git branch -r'` - List remote branches 📡
-- `alias gs='git status'` - Show the working tree status 🌳
-- `alias ga='git add'` - Add file contents to the index ➕
-- `alias gc='git commit -m'` - Commit changes with a message 💬
-- `alias gd='git diff'` - Show changes between commits, etc 📊
-- `alias gp='git pull'` - Fetch from another repository or a local branch 🔁
-- `alias gf='git fetch --all'` - Fetch changes from all remotes 🔄
-- `alias gco='git checkout'` - Switch branches or restore files 🔄
-- `alias gsw='git switch'` - Switch branches 🔀
-- `alias gu='ga .; gc "updates"; git push'` - Add all, commit "updates", and push ⬆️
-- `alias gcl='git clone'` - Clone a repository quickly 🐑
-- `alias gm='git merge'` - Merge branches 🤝
-- `alias gcb='git checkout -b'` - Create and switch to a new branch 🆕
-- `alias gg='git log --graph ...'` - Show a graph of commits 📈
-- `alias gca='git commit --amend'` - Amend the previous commit ✏️
-- `alias gss='git stash push -m'` - Stash changes with a message 📦
-- `alias gsa='git stash apply && git stash drop'` - Apply and drop the latest stash 💼
-- `alias gsl='git stash list'` - List stashes 📝
-- `alias gsc='git stash clear'` - Clear all stashes 🧹
-- `alias gl='git log'` - Show commit logs 📚
+## Installation
 
-## Git Workflow Aliases 🔄
-- `alias gdb='...'` - Delete all branches except current 🚫🌿
-- `alias gpmaster='...'` - Reset local master to match origin 🔄
-- `alias gpmain='...'` - Reset local main to match origin 🔄
+To get started with **HelpfulScripts**, clone the repository to your local machine using the following command:
 
-## Development Environment Aliases 🛠️
-- `alias so='...'` - Copy and re-source zshrc 🔄
-- `alias prof='...'` - Open zshrc in VS Code for editing 📝
-- `alias venv='source venv/bin/activate'` - Activate Python virtual environment 🐍
-- `alias de='deactivate'` - Deactivate Python virtual environment 🐍⬇️
-- `alias python='python3'` - Default Python to Python 3 🐍3️⃣
-- `alias pip='pip3'` - Default pip to pip3 🛠️
+`git clone https://github.com/yourusername/HelpfulScripts.git`
 
-## Utility Aliases 🔧
-- `alias tf='tail -f'` - Follow the growth of a log file 📈
-- `alias dontsleep='...'` - Prevent the system from sleeping 😴❌
-- `alias enablesleep='...'` - Re-enable system sleeping 😴✅
 
-## Encrypted Directory Management 🔐
-- `alias dec='...'` - Mount the encrypted directory 🏗️
-- `alias enc='...'` - Unmount the encrypted directory 🏗️⬇️
-- `trap 'enc' EXIT` - Ensure encrypted directory is unmounted on exit 🚪🔐
+Once cloned, navigate into the `HelpfulScripts` directory:
 
-## Docker Utility Aliases 🐳
-- `alias dockillall='...'` - Kill all running containers 🛑
-- `alias dockerclean='...'` - Clean up Docker resources 🧼
+`cd HelpfulScripts`
 
-## System Performance and Networking 💻
-- `alias du='df -h'` - Display disk usage 📊
-- `alias top='htop'` - Monitor system performance 📈
-- `alias ports='...'` - Show open network ports 🔌
 
-## Git Global Configuration and Extras 🌐
-- `git config --global alias.uncommit 'reset HEAD^'` - Uncommit the last commit ↩️
-- `export PATH="...VS Code..."` - Add VS Code to PATH 🛣️
-- `alias gll='...'` - Git log in a compact format 📜
-- `export GREP_COLORS='...'` - Customize grep colors 🎨
-- `alias grep='grep --color=always'` - Always show colored grep output 🌈
-- `alias gotestall='...'` - Run Go tests in all directories 🏃
+## Usage
 
-Make your terminal experience more efficient and fun with these aliases! 😊
+### General System Aliases
+
+Enhance your terminal experience with handy aliases for common tasks. To make these aliases available in your terminal, simply source the provided alias file from your shell configuration file (ie `.zshrc`):
+
+`source ~/HelpfulScripts/zshrc`
+
+
+This command adds a set of convenient shortcuts for everyday commands, such as clearing the terminal, listing files, and navigating directories.
+
+### Git Aliases
+
+For Git users, the repository includes aliases to simplify version control operations. These aliases cover a range of Git commands, from basic branch management to complex log visualization.
+
+### Development Environment Setup
+
+Find scripts to set up and manage your development environment, including Python virtual environments, Docker container management, and encrypted directory handling.
+
+### Utility Scripts
+
+Discover utility scripts for system performance monitoring, network management, and more. These scripts are designed to provide quick access to essential system information and tasks.
+
+## Customization
+
+Feel free to customize the provided scripts and aliases to fit your specific needs. The repository is structured to be easily extendable, allowing you to add your own tools or modify existing ones.
+
+## Contributing
+
+Contributions to **HelpfulScripts** are always welcome! Whether it's adding new scripts, improving existing ones, or fixing bugs, your input helps make this resource more valuable for everyone.
+
