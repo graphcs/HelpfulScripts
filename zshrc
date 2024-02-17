@@ -36,7 +36,7 @@ alias gpmaster='git fetch origin && git reset --hard origin/master' # Reset loca
 alias gpmain='git fetch origin && git reset --hard origin/main'     # Reset local main to match origin
 
 # Development Environment Aliases
-alias so='cp /root/HelpfulScripts/zshrc ~/.zshrc && source ~/.zshrc'  # Copy zshrc from /root/HelpfulScripts and re-source it
+alias so='cp ~/HelpfulScripts/zshrc ~/.zshrc && source ~/.zshrc'  # Copy zshrc from /root/HelpfulScripts and re-source it
 alias prof='code /root/HelpfulScripts/zshrc'  # Open /root/HelpfulScripts/zshrc in Visual Studio Code for editing
 alias venv='source venv/bin/activate'      # Activate Python virtual environment
 alias de='deactivate'                      # Deactivate Python virtual environment
@@ -77,3 +77,23 @@ export PATH="/usr/local/bin:$PATH"
 export PATH=$PATH:/usr/local/go/bin
 export GOPATH=/Users/root/go
 export PATH=$GOPATH/bin:$PATH
+
+# linux
+# alias ncs='read -p "Filename: " file_to_send; read -p "IP: " receiver_ip; pv "$file_to_send" | nc $receiver_ip 12345'
+
+# mac
+alias ncl="local_ip=\$(ipconfig getifaddr en0 || echo 'Error: Could not obtain local IP address.') && [ \"\$local_ip\" != 'Error: Could not obtain local IP address.' ] && echo \"On the sender, type: nc \$local_ip 12345 < file_to_send\" && nc -l 12345 | pv -L 1m > received_file"
+ncs_function() {
+    echo "Filename: "
+    read file_to_send
+    echo "Receiver IP: 192.168."
+    read ip_suffix
+    receiver_ip="192.168.$ip_suffix"
+    echo "Port (default 12345): "
+    read port
+    port=${port:-12345}
+    pv "$file_to_send" | nc $receiver_ip $port
+}
+
+alias ncs='ncs_function'
+
