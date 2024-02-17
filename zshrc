@@ -97,3 +97,5 @@ ncs_function() {
 
 alias ncs='ncs_function'
 
+# start ephemeral docker alpine
+alias da='docker run -it --rm --log-driver none -v $(pwd):/test --name test alpine:latest sh -c "apk update && apk add git openssh-client p7zip && /bin/sh"'
