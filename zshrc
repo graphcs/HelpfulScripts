@@ -81,6 +81,11 @@ export PATH=$GOPATH/bin:$PATH
 # linux
 # alias ncs='read -p "Filename: " file_to_send; read -p "IP: " receiver_ip; pv "$file_to_send" | nc $receiver_ip 12345'
 
+alias ip="ipconfig getifaddr en0"
+alias ipl="hostname -I | cut -d' ' -f1"
+# linux nc command
+# alias ncl="local_ip=\$(hostname -I | cut -d' ' -f1) && echo \"On the sender, type: nc $local_ip 12345 < file_to_send\" && nc -l 12345 | pv > received_file"
+
 # mac
 alias ncl="local_ip=\$(ipconfig getifaddr en0 || echo 'Error: Could not obtain local IP address.') && [ \"\$local_ip\" != 'Error: Could not obtain local IP address.' ] && echo \"On the sender, type: nc \$local_ip 12345 < file_to_send\" && nc -l 12345 | pv -L 1m > received_file"
 ncs_function() {
