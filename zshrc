@@ -36,8 +36,8 @@ alias gpmaster='git fetch origin && git reset --hard origin/master' # Reset loca
 alias gpmain='git fetch origin && git reset --hard origin/main'     # Reset local main to match origin
 
 # Development Environment Aliases
-alias so='cp ~/HelpfulScripts/zshrc ~/.zshrc && source ~/.zshrc'  # Copy zshrc from /root/HelpfulScripts and re-source it
-alias prof='code ~/HelpfulScripts/zshrc'  # Open /root/HelpfulScripts/zshrc in Visual Studio Code for editing
+alias so='cp ~/HelpfulScripts/zshrc ~/.zshrc && source ~/.zshrc' 
+alias prof='code ~/HelpfulScripts/zshrc'  
 alias venv='source venv/bin/activate'      # Activate Python virtual environment
 alias de='deactivate'                      # Deactivate Python virtual environment
 alias python='python3'                     # Default Python to Python 3
@@ -102,5 +102,5 @@ ncs_function() {
 
 alias ncs='ncs_function'
 
-alias da='docker run -it --rm --log-driver none -v $(pwd):/test --name test alpine:latest sh -c "apk update && apk add git openssh-client p7zip && /bin/sh"'
+alias da='docker run -it --rm --log-driver none -v "$(pwd)":/test --name test alpine:latest sh -c "apk update && apk add git openssh-client p7zip pv && /bin/sh"'
 alias zenc='function _zipencrypt(){ 7z a -t7z -p -mhe=on "archive_$(date +%Y-%m-%d_%H-%M-%S).7z" "$@"; }; _zipencrypt'
