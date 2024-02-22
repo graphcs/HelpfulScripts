@@ -104,3 +104,7 @@ alias ncs='ncs_function'
 
 alias da='docker run -it --rm --log-driver none -v "$(pwd)":/test --name test alpine:latest sh -c "apk update && apk add git openssh-client p7zip pv && /bin/sh"'
 alias zenc='function _zipencrypt(){ 7z a -t7z -p -mhe=on "archive_$(date +%Y-%m-%d_%H-%M-%S).7z" "$@"; }; _zipencrypt'
+
+alias killport='function _killport(){ pid=$(lsof -ti tcp:$1); if [ -n "$pid" ]; then kill -9 $pid; else echo "No process found listening on port $1"; fi }; _killport'
+
+alias pbc='reattach-to-user-namespace pbcopy'
